@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  mvc:
+    static-path-pattern: "/static/**"
+  resources:
+    static-locations: "classpath:/"
+    add-mappings: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ""
+          jwk-set-uri: "http://localhost:8081/main"
+
+
+
+
+
