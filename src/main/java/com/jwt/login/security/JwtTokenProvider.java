@@ -45,7 +45,7 @@ public class JwtTokenProvider {
         return Jwts.builder()
                 .setHeader(headers)
                 .setClaims(payloads) // 정보 저장
-                .setIssuer("YSH")
+                .setIssuer("YSH") // is
                 .setIssuedAt(now) // iat - 토근이 발급된 시간 (issued At) 이 값으로 토큰의 age가 얼마나 된지 알수 있음.
                 .setExpiration(new Date(now.getTime() + tokenValidTime)) // exp - 토큰의 만료시간 (expiration), 시간ㅇ느 NumericDate 형식으로 되어있음.
                 .signWith(SignatureAlgorithm.HS256, secretKey)  // 사용할 암호화 알고리즘과
